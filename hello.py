@@ -10,7 +10,7 @@ def hello():
     keys = client.keys()
     for key in keys:
         in_redis[key] = client.get(key)
-    return "Hello World!\nRedis has\n{}\nin it".format(in_redis)
+    return "Hello World!<br>Redis has<br>{}<br>in it".format(in_redis)
 
 if __name__ == "__main__":
    app.run()
