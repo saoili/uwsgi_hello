@@ -5,6 +5,14 @@ app = Flask(__name__)
 
 
 @app.route("/")
+def index():
+    return (
+        "<html>I am a back end dev, dipping my toe in front end" +
+        "<br>There is currently nothing to see here</html>"
+    )
+
+
+@app.route("/hello/")
 def hello():
     in_redis = {}
     client = redis.Redis()
